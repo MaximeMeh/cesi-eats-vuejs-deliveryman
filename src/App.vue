@@ -4,10 +4,15 @@
       <router-link to="/" class="navbar-brand">CesiEats</router-link>
       <div class="navbar-nav mr-auto">
         <li class="nav-item">
-          <router-link to="/tutorials" class="nav-link">Tutorials</router-link>
+          <router-link to="/deliveryman" class="nav-link"
+            >Deliveryman</router-link
+          >
         </li>
         <li class="nav-item">
           <router-link to="/add" class="nav-link">Add</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/login" class="nav-link">Login</router-link>
         </li>
       </div>
     </nav>
