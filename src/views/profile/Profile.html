@@ -1,0 +1,18 @@
+<div class="navbar">
+    <Logo></Logo>  
+</div>
+
+<div class="profile">
+    <div class="card">
+
+        <h1 class="card__title">{{user.first_name}} {{user.last_name}}</h1>
+        <p class="card__subtitle">{{user.email}}</p>
+        
+        <p class="card__subtitle"><img :src="user.photo" /></p>
+
+        <div class="form-row">
+            <button @click="logout()" class="button">Déconnexion</button>
+        </div>
+
+    </div>
+</div>

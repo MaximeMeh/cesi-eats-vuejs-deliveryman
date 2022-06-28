@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import Login from '../views/Login.vue'
 import Profile from '../views/Profile.vue'
 
+
 const routes: Array<RouteRecordRaw> = [
   // {
   //   path: '/',
@@ -39,6 +40,10 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/login",
     component: () => import('../views/login/Login.vue')
+  },
+  {
+    path: '/profile',
+    component: () => import('../views/profile/Profile.vue')
   },
 ]
 
