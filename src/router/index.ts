@@ -1,50 +1,17 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import Login from '../views/Login.vue'
-import Profile from '../views/Profile.vue'
+import {createRouter, createWebHistory, RouteRecordRaw} from 'vue-router'
+import Home from '@/views/Home.vue'
+import Login from '@/views/Login.vue'
+import Register from '@/views/Register.vue'
 
 const routes: Array<RouteRecordRaw> = [
-  // {
-  //   path: '/',
-  //   name: 'login',
-  //   component: Login
-  // },
-  // {
-  //   path: '/home',
-  //   name: 'home',
-  //   component: HomeView
-  // },
-  // { 
-  //   name: 'profile',
-  //   path: '/profile', 
-  //   component: Profile, 
-  //   props:true 
-  // },
-  {
-    path: "/",
-    alias: "/deliveryman",
-    name: "deliveryman",
-    component: () => import("../components/DeliverymanList.vue")
-  },
-  {
-    path: "/tutorials/:id",
-    name: "tutorial-details",
-    component: () => import("../components/TutorialDetails.vue")
-  },
-  {
-    path: "/add",
-    name: "add",
-    component: () => import("../components/AddTutorial.vue")
-  },
-  {
-    path: "/login",
-    component: () => import('../views/login/Login.vue')
-  },
+    {path: '/', component: Home},
+    {path: '/login', component: Login},
+    {path: '/register', component: Register},
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
-  routes
+    history: createWebHistory(process.env.BASE_URL),
+    routes
 })
 
 export default router
